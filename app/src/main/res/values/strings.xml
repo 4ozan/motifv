@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Motifv</string>
+    <string name="loading">Loading...</string>
+    <string name="new_quote">New Quote</string>
+</resources>
