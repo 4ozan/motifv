@@ -1,31 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#111"
-    android:padding="24dp">
+    android:padding="24dp"
+    android:background="@drawable/background">
 
     <TextView
         android:id="@+id/quoteText"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/loading"
+        android:text="Loading..."
         android:textColor="#FFFFFF"
         android:textSize="24sp"
+        android:textStyle="bold"
         android:gravity="center"
-        android:layout_centerInParent="true"
         android:lineSpacingExtra="8dp"
-        android:textStyle="bold" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/newQuoteButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"/>
 
     <Button
         android:id="@+id/newQuoteButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/new_quote"
-        android:layout_below="@id/quoteText"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="32dp"
+        android:text="New Quote"
         android:backgroundTint="#FFD700"
         android:textColor="#000"
-        android:textStyle="bold"/>
-</RelativeLayout>
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="32dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
